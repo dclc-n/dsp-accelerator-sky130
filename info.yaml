@@ -1,4 +1,4 @@
----
+# Tiny Tapeout project information
 project:
   title:        "Real-Time Parallel DSP Accelerator Core"
   author:       "DSP Engineering"
@@ -7,45 +7,47 @@ project:
   language:     "Verilog"
   clock_hz:     50000000
 
-# How many tiles your design occupies:
+  # How many tiles your design occupies?
   tiles: "1x1"
 
-# Your top module name:
-  top_module:  "tt_um_dsp_accelerator"
+  # Your top module name:
+  top_module:  "tt_um_example"
 
-# List of source files:
+  # List your project's source files here:
   source_files:
     - "project.v"
 
-# Inputs:
-  inputs:
-    - in_data_0
-    - in_data_1
-    - in_data_2
-    - in_data_3
-    - mode_0
-    - mode_1
-    - mode_2
-    - mode_3
+# Pinout definition:
+pinout:
+  # Inputs
+  ui[0]: "data_in_0"
+  ui[1]: "data_in_1"
+  ui[2]: "data_in_2"
+  ui[3]: "data_in_3"
+  ui[4]: "mode_0"
+  ui[5]: "mode_1"
+  ui[6]: "mode_2"
+  ui[7]: "mode_3"
 
-# Outputs:
-  outputs:
-    - out_data_0
-    - out_data_1
-    - out_data_2
-    - out_data_3
-    - reserved_0
-    - reserved_1
-    - reserved_2
-    - done_flag
+  # Outputs
+  uo[0]: "data_out_0"
+  uo[1]: "data_out_1"
+  uo[2]: "data_out_2"
+  uo[3]: "data_out_3"
+  uo[4]: "reserved_0"
+  uo[5]: "reserved_1"
+  uo[6]: "reserved_2"
+  uo[7]: "done_flag"
 
-# Bidirectional IOs:
-  bidirectional:
-    - checksum_0
-    - checksum_1
-    - checksum_2
-    - checksum_3
-    - checksum_4
-    - checksum_5
-    - checksum_6
-    - checksum_7
+  # Bidirectional pins
+  uio[0]: "checksum_0"
+  uio[1]: "checksum_1"
+  uio[2]: "checksum_2"
+  uio[3]: "checksum_3"
+  uio[4]: "checksum_4"
+  uio[5]: "checksum_5"
+  uio[6]: "checksum_6"
+  uio[7]: "checksum_7"
+
+# Do not change!
+yaml_version: 6
