@@ -1,6 +1,6 @@
 `default_nettype none
 
-module tt_um_dsp_accelerator (
+module tt_um_example (
     input  wire [7:0] ui_in,    // [7:4] Mode, [3:0] Data In (Nibble)
     output wire [7:0] uo_out,   // [7:4] Status/Done, [3:0] Result (Nibble)
     input  wire [7:0] uio_in,   // IOs: Bidirectional Input path
